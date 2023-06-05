@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Tangerine">
     <style>
         body {
             background-image: url("house_in_ocean-3.png");
@@ -10,6 +13,15 @@
             background-position: center top;
             margin: 0;
             padding: 0;
+        }
+        
+        h1 {
+          font-family: 'Tangerine', serif;
+          font-size: 48px;
+          text-align: center;
+          color: #ffffff;
+          margin: 20px 0;
+          text-shadow: 4px 4px 4px #aaa;
         }
         
         .button-container {
@@ -30,12 +42,11 @@
         #button1 {
             width: 55px;
             height: 75px;
-            top: 50px;
-            left: 50px;
+            top: 470px;
+            left: 1220px;
         }
 
         #button2 {
-            position: absolute;
             width: 55px;
             height: 75px;
             top: 150px;
@@ -43,16 +54,17 @@
         }
 
         #button3 {
-            position: absolute;
             width: 55px;
             height: 75px;
             top: 250px;
             left: 250px;
         }
     </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cool+Font">
 </head>
 
 <body>
+  <h1>The Migrant Experience</h1>
     <img class="button" id="button1" src="Gogol-2.png" onclick="toggleButton('button1')">
     <img class="button" id="button2" src="button2_inactive.jpg" onclick="toggleButton('button2')">
     <img class="button" id="button3" src="button3_inactive.jpg" onclick="toggleButton('button3')">
