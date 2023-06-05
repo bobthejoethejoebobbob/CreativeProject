@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .button {
+      width: 150px;
+      height: 50px;
+      background-color: #e5e5e5;
+      border: none;
+      color: #000000;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #c0c0c0;
+    }
+
+    .button.active {
+      background-color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <button class="button" id="button1">Button 1</button>
+  <button class="button" id="button2">Button 2</button>
+  <button class="button" id="button3">Button 3</button>
+
+  <script>
+    function toggleButton(buttonId) {
+      var button = document.getElementById(buttonId);
+      button.classList.toggle("active");
+    }
+
+    var button1 = document.getElementById("button1");
+    var button2 = document.getElementById("button2");
+    var button3 = document.getElementById("button3");
+
+    button1.addEventListener("click", function() {
+      toggleButton("button1");
+    });
+
+    button2.addEventListener("click", function() {
+      toggleButton("button2");
+    });
+
+    button3.addEventListener("click", function() {
+      toggleButton("button3");
+    });
+  </script>
+</body>
+</html>
