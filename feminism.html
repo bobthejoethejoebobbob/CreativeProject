@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+        body {
+            background-image: url("house_in_ocean-3.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+          font-family: 'Tangerine', serif;
+          font-size: 48px;
+          text-align: center;
+          color: #ffffff;
+          margin: 20px 0;
+          text-shadow: 4px 4px 4px #aaa;
+        }
+        
+        .button-container {
+          position: relative;
+          height: 100vh;
+        }
+        
+        .button {
+            cursor: pointer;
+            margin-bottom: 10px;
+            position: absolute;
+        }
+
+        .button.active,
+        .button:hover {
+            filter: brightness(1.2);
+        }
+
+        #button1 {
+            width: 55px;
+            height: 75px;
+            top: 57%;
+            left: 84.5%;
+        }
+
+        #button2 {
+            width: 75px;
+            height: 75px;
+            top: 79.3%;
+            left: 50.3%;
+        }
+
+        #button3 {
+            width: 80px;
+            height: 55px;
+            top: 64%;
+            left: 13.1%;
+        }
+    </style>
+</head>
+
+<body>
+  <h1>Female Oppression</h1>
+  <div class="button-container">
+    <a href="gogol.html" target="_blank">
+      <img class="button" id="button1" src="Gogol-2.png" onclick="toggleButton('button1')">
+    </a>
+    <a href="feminism.html" target="_blank">
+      <img class="button" id="button2" src="Feminism_symbol.png" onclick="toggleButton('button2')">
+    </a>
+    <a href="insecurity.html" target="_blank">
+      <img class="button" id="button3" src="green-van.png" onclick="toggleButton('button3')">
+    </a>
+  </div>
+
+  <script>
+    function toggleButton(buttonId) {
+      var button = document.getElementById(buttonId);
+      button.classList.toggle("active");
+
+      var buttonSrc = button.src;
+      var buttonInactiveSrc = buttonSrc.replace("_active.jpg", "_inactive.jpg");
+      var buttonActiveSrc = buttonSrc.replace("_inactive.jpg", "_active.jpg");
+
+      if (button.classList.contains("active")) {
+        button.src = buttonActiveSrc;
+      } else {
+        button.src = buttonInactiveSrc;
+      }
+    }
+  </script>
+</body>
+</html>
