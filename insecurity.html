@@ -62,7 +62,6 @@
     <a href="index.html" target="_self">
       <img class="button" id="button1" src="back.png" onclick="toggleButton('button1')">
     </a>
-    <img class="button" id="button2" src="play.png" onclick="toggleButton('button2'); playSong()">
   </div>
 
   <script>
@@ -78,15 +77,6 @@
         button.src = buttonActiveSrc;
       } else {
         button.src = buttonInactiveSrc;
-      }
-    }
-    var audio = new Audio("song.mp3"); // Replace "song.mp3" with the path or URL of your song file
-
-    function playSong() {
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
       }
     }
   </script>
