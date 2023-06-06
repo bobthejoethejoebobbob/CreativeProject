@@ -63,24 +63,19 @@
         .boat-icon {
             width: 100px;
             height: 100px;
-            position: relative;
+            position: absolute;
             animation: rocking 2s infinite ease-in-out;
         }
-
-        .boat-icon:hover {
-            animation-play-state: paused;
+        
+        .boat-icon:hover .boat-image {
+            animation: rocking 2s infinite ease-in-out;
         }
-
-        .boat-icon:before {
-            content: "";
+        
+        .boat-image {
             position: absolute;
             width: 100%;
             height: 100%;
-            background: url("boat-2.png") center/contain no-repeat;
-        }
-
-        .button:hover + .boat-icon {
-            animation-play-state: running;
+            background: url("boat.png") center/contain no-repeat;
         }
 
         @keyframes rocking {
@@ -88,8 +83,12 @@
                 transform: rotateZ(0);
             }
 
-            50% {
+            25% {
                 transform: rotateZ(10deg);
+            }
+            
+            75% {
+                transform: rotateZ(-10deg);
             }
 
             100% {
@@ -129,6 +128,8 @@
       }
     }
   </script>
-  <div class="boat-icon"></div>
+  <div class="boat-icon">
+    <div class="boat-image"></div>
+  </div>
 </body>
 </html>
